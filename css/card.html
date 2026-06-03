@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 400px;
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rect {
+        height: 140px;
+        width: 300px;
+        background-color: rgb(32, 108, 207);
+    }
+
+    .circle {
+        height: 125px;
+        width: 126px;
+        border: 4px solid white;
+        border-radius: 50%;
+        position: absolute;
+        top: 75px;
+        z-index: 16;
+        background-color: aliceblue;
+        overflow: hidden;
+    }
+
+    .circle img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .rect2 { 
+        margin-top: 75px; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .smallrec {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .smallrec h2 {
+        font-size: 22px;
+        margin: -16px 0 2px 0;
+        color: #000;
+    }
+
+    .smallrec h3 {
+        font-size: 15px;
+        margin: 0;
+        font-weight: normal;
+    }
+
+    .symbol {
+        height: 46px;
+        width: 300px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .c {
+        height: 37px;
+        width: 39px;
+        border-radius: 50%;
+        background-color: aliceblue;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .c img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+    }
+
+    .sub {
+        height: 67px;
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .sub1 {
+        height: 46px;
+        width: 123px;
+        border-radius: 40px;
+          background-color: rgb(32, 108, 207);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sub1 h2, .sub1 h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rect"></div>
+        <div class="circle">
+            <img src="record-of-ragnarok-anime-qin-shi-huang.jpg" alt="jpg">
+        </div>
+        <div class="rect2">
+            <div class="smallrec">
+                <h2><b>CodingLab</b></h2>
+                <h3><b>Youtube & Bigger</b></h3>
+            </div>
+            <div class="symbol">
+                <div class="c"><img src="Facebook-Logosu.jpg" alt="jpg"></div>
+                <div class="c"><img src="b1a3fab214230557053ed1c4bf17b46c-twitter-icon-logo.jpg" alt="jpg"></div>
+                <div class="c"><img src="instagram-logo_971166-164438.jpg" alt="jpg"></div>
+                <div class="c"><img src="round-youtube-logo-isolated-white-background_469489-983.jpg" alt="jpg"></div>
+            </div>
+            <div class="sub">
+                <div class="sub1"><h2>Subscribe</h2></div>
+                <div class="sub1"><h3>Message</h3></div>
+            </div>
+            <div class="sq">
+                <div class="like"></div>
+                <div class="like"></div>
+                <div class="like"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

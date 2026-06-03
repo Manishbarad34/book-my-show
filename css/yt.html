@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Real Layout Wireframe</title>
+    <style>
+        body {
+            background-color: rgb(15, 15, 15); 
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, system-ui, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .top-navbar {
+            height: 56px;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgb(71, 68, 68);
+            z-index: 100;
+        }
+        
+        .left-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .menu-burger-box {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 50%;
+        }
+
+        .logo-box {
+            width: 90px;
+            height: 20px;
+            background-color: rgb(63, 22, 212);
+            border-radius: 4px;
+        }
+
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            flex: 0 1 728px;
+            margin: 0 40px;
+        }
+
+        .search-container {
+            display: flex;
+            flex: 1;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 40px 0 0 40px;
+            padding-left: 16px;
+            overflow: hidden;
+        }
+
+        .search-input-box {
+            width: 100%;
+            height: 40px;
+            background-color: rgba(71, 12, 180, 0);
+        }
+
+        .search-btn-box {
+            width: 64px;
+            height: 40px;
+            background-color: rgb(65, 63, 63);
+            border: 1px solid rgb(48, 48, 46);
+            border-left: none;
+            border-radius: 0 40px 40px 0;
+        }
+
+        .mic-box {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(49, 48, 49);
+            border-radius: 50%;
+            margin-left: 12px;
+            flex-shrink: 0;
+        }
+
+        .right-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .action-box {
+            width: 80px;
+            height: 36px;
+            background-color: rgb(15, 219, 209);
+            border-radius: 18px;
+        }
+
+        .circle-action-box {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(221, 13, 93);
+            border-radius: 50%;
+        }
+
+        .main-container {
+            display: flex;
+            margin-top: 56px; 
+            height: calc(100vh - 56px);
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 240px;
+            padding: 12px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .sidebar-item {
+            width: 100%;
+            height: 40px;
+            background-color: rgba(10, 187, 178, 0);
+            margin-bottom: 4px;
+            border-radius: 10px;
+        }
+        
+        .sidebar-item.active {
+            background-color: rgb(39, 39, 39);
+        }
+
+        .sidebar-divider {
+            height: 1px;
+            background-color: rgb(63, 63, 63);
+            margin: 12px 0;
+        }
+
+        .feed-container {
+            flex-grow: 1;
+            padding: 24px;
+            overflow-y: auto;
+            background-color: rgb(15, 15, 15);
+        }
+
+        .pills-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+        
+        .pills-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .pill-box {
+            flex-shrink: 0;
+            height: 32px;
+            width: 80px;
+            background-color: rgb(39, 39, 39);
+            border-radius: 8px;
+        }
+
+        .pill-box-active {
+            flex-shrink: 0;
+            height: 32px;
+            width: 50px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            column-gap: 16px;
+            row-gap: 40px;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .thumbnail-box {
+            width: 100%;
+            aspect-ratio: 16 / 9; 
+            background-color: rgb(58, 58, 58);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-navbar">
+        <div class="left-header">
+            <div class="menu-burger-box"></div>
+            <div class="logo-box"></div>
+        </div>
+        
+        <div class="search-wrapper">
+            <div class="search-container">
+                <div class="search-input-box"></div>
+            </div>
+            <div class="search-btn-box"></div>
+            <div class="mic-box"></div>
+        </div>
+        
+        <div class="right-header-actions">
+            <div class="action-box"></div>
+            <div class="circle-action-box"></div>
+            <div class="circle-action-box"></div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="sidebar">
+            <div class="sidebar-item active"></div> 
+            <div class="sidebar-item"></div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-item"></div>
+            <div class="sidebar-item"></div>
+            <div class="sidebar-item"></div>
+            <div class="sidebar-item"></div>
+        </div>
+
+        <div class="feed-container">
+            
+            <div class="pills-container">
+                <div class="pill-box-active"></div>
+                <div class="pill-box"></div>
+                <div class="pill-box"></div>
+                <div class="pill-box"></div>
+                <div class="pill-box"></div>
+                <div class="pill-box"></div>
+                <div class="pill-box"></div>
+                <div class="pill-box"></div>
+                <div class="pill-box"></div>
+            </div>
+
+            <div class="video-grid">
+                
+                <div class="video-card">
+                    <div class="thumbnail-box"></div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail-box"></div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail-box"></div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail-box"></div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail-box"></div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail-box"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --color:rgb(0, 0, 0);
+        --color1:rgb(255, 0, 0);
+        --color2:rgb(0, 255, 0);
+        --color3:rgb(0, 0, 255);
+        --h11:180px;
+        --w11:350px;
+        --b:2px solid black;
+        --wx:797px;
+        --hx:100px;
+        --h1:800px;
+        --w1:900px;
+        --hc:200px;
+        --wc:200px;
+        --dc:inline-block;
+        --br:50%;
+        --p:40px;
+        --m:280px;
+        --m1:10px;
+
+    }
+     .class{
+        height: var(--h1);
+        width:  var(--w1);
+        border: var(--b);
+        background-color: var(--color);
+        padding: var(--p);
+        margin-top: var(--m1);
+    }
+    .a{
+         height: var(--h11);
+        width:  var(--w11);
+        border: var(--b);
+        background-color: var(--color1);
+        display: var(--dc);
+        padding: var(--p);
+        margin-top: var(--m1);
+        margin-left: var(--m1);
+    }
+    .c{
+        height: var(--hx);
+        width:  var(--wx);
+        border: var(--b);
+        background-color: var(--color2);
+        display: var(--dc);
+          margin-top: var(--m1);
+        margin-left: var(--m1);
+        padding: var(--p);
+    }
+    .d{
+        height: var(--hc);
+        width:  var(--wc);
+        border: var(--b);
+        background-color: var(--color3);
+        display: var(--dc);
+        border-radius: var(--br);
+        padding: var(--p);
+        margin-top: var(--m1);
+        margin-left: var(--m);
+    }
+</style>
+<body>
+    <div class="class">
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+    </div>
+    
+</body>
+</html>
